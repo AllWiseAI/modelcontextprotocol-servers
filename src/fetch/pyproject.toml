@@ -1,7 +1,7 @@
 [project]
-name = "mcp-server-fetch"
-version = "0.6.3"
-description = "A Model Context Protocol server providing tools to fetch and convert web content for usage by LLMs"
+name = "allwise-mcp-fetch"
+version = "2025.09.18.1707"
+description = "A Model Context Protocol server providing enhanced web content fetching capabilities for LLMs"
 readme = "README.md"
 requires-python = ">=3.10"
 authors = [{ name = "Anthropic, PBC." }]
@@ -26,11 +26,19 @@ dependencies = [
 ]
 
 [project.scripts]
-mcp-server-fetch = "mcp_server_fetch:main"
+allwise-mcp-fetch = "mcp_server_fetch:main"
 
 [build-system]
 requires = ["hatchling"]
 build-backend = "hatchling.build"
 
+[tool.hatch.build.targets.wheel]
+packages = ["src/mcp_server_fetch"]
+
 [tool.uv]
-dev-dependencies = ["pyright>=1.1.389", "ruff>=0.7.3"]
+dev-dependencies = [
+    "pyright>=1.1.389",
+    "ruff>=0.7.3",
+    "tomlkit>=0.13.3",
+    "twine>=6.2.0",
+]

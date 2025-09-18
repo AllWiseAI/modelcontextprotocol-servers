@@ -1,6 +1,8 @@
-# Fetch MCP Server
+# Allwise MCP Fetch Server
 
-A Model Context Protocol server that provides web content fetching capabilities. This server enables LLMs to retrieve and process content from web pages, converting HTML to markdown for easier consumption.
+A Model Context Protocol server that provides enhanced web content fetching capabilities. This server enables LLMs to retrieve and process content from web pages, converting HTML to markdown for easier consumption.
+
+> This is a customized version of the original MCP fetch server with additional features and improvements.
 
 > [!CAUTION]
 > This server can access local/internal IP addresses and may represent a security risk. Exercise caution when using this MCP server to ensure this does not expose any sensitive data.
@@ -29,14 +31,14 @@ Optionally: Install node.js, this will cause the fetch server to use a different
 ### Using uv (recommended)
 
 When using [`uv`](https://docs.astral.sh/uv/) no specific installation is needed. We will
-use [`uvx`](https://docs.astral.sh/uv/guides/tools/) to directly run *mcp-server-fetch*.
+use [`uvx`](https://docs.astral.sh/uv/guides/tools/) to directly run *allwise-mcp-fetch*.
 
 ### Using PIP
 
-Alternatively you can install `mcp-server-fetch` via pip:
+Alternatively you can install `allwise-mcp-fetch` via pip:
 
 ```
-pip install mcp-server-fetch
+pip install allwise-mcp-fetch
 ```
 
 After installation, you can run it as a script using:
@@ -59,7 +61,7 @@ Add to your Claude settings:
   "mcpServers": {
     "fetch": {
       "command": "uvx",
-      "args": ["mcp-server-fetch"]
+      "args": ["allwise-mcp-fetch"]
     }
   }
 }
