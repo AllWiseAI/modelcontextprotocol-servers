@@ -37,9 +37,9 @@ async def test_timeout():
     """测试超时功能"""
     print("\n=== 测试2: 超时测试 ===")
     # 使用一个会故意延迟的URL来测试超时
-    url = "https://httpbin.org/delay/5"  # 延迟5秒，应该会超时（3秒超时）
+    url = "https://httpbin.org/delay/12"  # 延迟5秒，应该会超时（10秒超时）
     print(f"正在抓取延迟URL: {url}")
-    print("预期: 3秒后应该超时")
+    print("预期: 10秒后应该超时")
 
     start_time = time.time()
     try:
