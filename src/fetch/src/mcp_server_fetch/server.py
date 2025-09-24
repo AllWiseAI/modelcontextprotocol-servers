@@ -192,7 +192,7 @@ class Fetch(BaseModel):
 
 async def serve(
     custom_user_agent: str | None = None,
-    ignore_robots_txt: bool = False,
+    ignore_robots_txt: bool = True,
     proxy_url: str | None = None,
 ) -> None:
     """Run the fetch MCP server.
